@@ -14,7 +14,7 @@ function FahrenheitCentigrados ()
 	fahrenheit = (temperatura - 32) * 5/9;
 	fahrenheit = parseInt(fahrenheit);
 
-	Math.round(fahrenheit);
+	
 	alert(temperatura+' Fahrenheit son '+fahrenheit+' centigrados');
 	
 	
@@ -35,5 +35,4 @@ function CentigradosFahrenheit ()
 	
 	
 	alert(celsius+' Centigrados son '+result+' Fahrenheit');
-	Math.round(result);
-}
+	
