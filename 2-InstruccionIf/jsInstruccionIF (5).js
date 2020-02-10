@@ -28,6 +28,14 @@ function mostrar()
 		alert('Usted NO es adolescente');
 	}
 
+otra forma: 
+	age= document.getElementById('edad').value;
+	age= parseInt(age);
+
+	if(!( age < 18 && age > 12) ){
+		alert('Usted NO es adolescente');
+	}
+
 */
 
 
