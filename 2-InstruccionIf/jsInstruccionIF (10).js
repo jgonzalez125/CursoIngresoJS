@@ -1,8 +1,10 @@
 function mostrar()
 {
 	var num;
-	//Genero el número RANDOM entre 1 y 10 
-	num = Math.round((Math.random() * 10 + 1));
+
+	num = Math.floor((Math.random() * 10)+1);
+		
+	//console.log(num);
 
 	if(num > 8)
 	{
@@ -31,7 +33,22 @@ function mostrar()
 			alert(num + ' vamos, la proxima se puede');
 		}
 	}
-*/
 
+
+ 
+	if(num < 4)
+	{
+		alert(num+ ' vamos, la proxima se puede');
+	}else
+	{
+		if(num > 8)
+		{
+			alert(num + ' EXCELENTE');
+		}else
+		{
+			alert(num+ ' aprobó');
+		}
+	}	
+*/
 
 }//FIN DE LA FUNCIÓN
