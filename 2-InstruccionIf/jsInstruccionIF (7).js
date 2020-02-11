@@ -11,15 +11,19 @@ function mostrar()
 	age= parseInt(age);
 
 	estadoCivil = document.getElementById('estadoCivil').value;
-	casado = document.getElementById('estadoCivil').value= 'Casado';
+/*	casado = document.getElementById('estadoCivil').value= 'Casado';
 	divorciado = document.getElementById('estadoCivil').value='Divorciado';
-	soltero = document.getElementById('estadoCivil').value= 'Soltero';
+*/	soltero = document.getElementById('estadoCivil').value= 'Soltero';
 
-
-	if (age < 18 && estadoCivil == soltero){
-		return console.log('bien');
-	} else if (age < 18 && estadoCivil == divorciado || casado) {
-		return alert('Es muy pequeño para NO ser soltero.');
+		if (age < 18 && estadoCivil != soltero){
+		 alert('Es muy pequeño para NO ser soltero.');
 	}
+
+	/*if (age < 18 && estadoCivil == soltero){
+		 console.log('bien');
+	} else if (age < 18 && estadoCivil == divorciado || casado) {
+		 alert('Es muy pequeño para NO ser soltero.');
+	}*/
+
 
 }//FIN DE LA FUNCIÓN
