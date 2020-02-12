@@ -22,7 +22,7 @@ switch(mesDelAño)
 			break;	
 }
 
-	alert('Mes del año');
+//asdasdasdasdasdasdasdasd
 
 
 }//FIN DE LA FUNCIÓN
