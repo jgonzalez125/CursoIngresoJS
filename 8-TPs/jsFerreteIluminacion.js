@@ -14,33 +14,66 @@ function CalcularPrecio ()
 	var marca;
 	var precio;
 	var descuento;
+	var porcentajeDescuento;
+	var porcentajeAumento;
 
 	cantidad= document.getElementById('Cantidad').value;
+	cantidad= parseInt(cantidad);
+	
 	marca= document.getElementById('Marca').value;
 	precio = 35;
-	descuento= cantidad * precio
+	
+	if(cantidad > 5)
+	{//A.	Si compra 6 o más  lamparitas bajo consumo tiene un descuento del 50%. 
+		porcentajeDescuento=50;
 
- 	if(cantidad > 5)
- 	{
- 		document.getElementById('precioDescuento').value= descuento * 50/100;
- 	}else
- 	{
- 		if(cantidad == 5 && marca =="ArgentinaLuz")
- 		{
- 			descuento =cantidad * precio * 40/100;
- 		} else
- 		{
- 			if(cantidad == 5 && marca !="ArgentinaLuz")
- 			{
- 				alert(cantidad * 35 * 0.3);
- 			} else
- 			{
- 				if(cantidad == 4 && marca == "ArgentinaLuz" || 'FelipeLamparas')
- 				{
+	}else
+	{//B.	Si compra 5  lamparitas bajo consumo marca "ArgentinaLuz" se hace un descuento del 40 % y si es de otra marca el descuento es del 30%.
+		if(cantidad == 5)
+		{ 
+			if(marca == 'ArgentinaLuz')
+			{
+			porcentajeDescuento=40;
+			}
+		 else
+		{
+			porcentajeDescuento=30;
+		}
+		}
+	}if(cantidad == 4)
+	{//C.	Si compra 4  lamparitas bajo consumo marca "ArgentinaLuz" o “FelipeLamparas” se hace un porcentajeDescuento del 25 % y si es de otra marca el porcentajeDescuento es del 20%.
+		if(marca == 'ArgentinaLuz' || marca == 'FelipeLamparas')
+		{
+			porcentajeDescuento=25;
+		} else 
+		{
+			porcentajeDescuento=20;
+		}
+	} else 
+	{//D.	Si compra 3  lamparitas bajo consumo marca "ArgentinaLuz"  el porcentajeDescuento es del 15%, si es  “FelipeLamparas” se hace un porcentajeDescuento del 10 % y si es de otra marca un 5%.
+		if(cantidad == 3)
+		{
+			if(marca == 'ArgentinaLuz')
+			{
+				porcentajeDescuento=15;
+			} else 
+			{
+				if(marca == 'FelipeLamparas')
+				{
+					porcentajeDescuento=10;
+				} else 
+				{
+					porcentajeDescuento=5;
+				}
+			}
+		}
+	}
+	descuento= cantidad * precio * porcentajeDescuento/100;
+	document.getElementById('precioDescuento').value= descuento;
+	porcentajeAumento =descuento*1.1-descuento;
 
- 				}
- 			}
- 		}
- 	}
+	if(descuento > 120)
+	{
+		document.getElementById('precioDescuento').value= 'Usted pagó '+porcentajeAumento+' de impuesto';
+	}
 }
-
