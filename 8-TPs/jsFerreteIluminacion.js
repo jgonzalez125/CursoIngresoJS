@@ -74,6 +74,6 @@ function CalcularPrecio ()
 
 	if(descuento > 120)
 	{
-		document.getElementById('precioDescuento').value= 'Usted pagó '+porcentajeAumento+' de impuesto';
+		document.getElementById('precioDescuento').value= 'Usted pagó '+porcentajeAumento+' de IIBB';
 	}
 }

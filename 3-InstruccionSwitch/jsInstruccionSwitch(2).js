@@ -5,20 +5,31 @@ function mostrar()
 
 	switch(mesDelAño)
 	{
-		case 'Junio' || 'Julio' || 'Agosto':
+		case 'Junio':
+		case 'Julio':
+		case 'Agosto':
 			alert("Abrigate que hace frio.");
 			break;
-		case ('Enero' || "Febrero" || "Marzo" || 'Abril' || 'Mayo'):
-			alert(  "Falta para el invierno.");
+		case 'Enero':
+		case 'Febrero':
+		case 'Marzo':
+		case 'Abril':
+		case 'Mayo':
+			alert("Falta para el invierno.");
 			break;
-		case "Agosto" || "Septiembre" ||"Octubre" ||"Noviembre" ||"Diciembre":
-			alert( "Ya pasamos el frio, ahora calor!!!.");
-			break;
-	/*			default: 
-				console.log('nada');
-				break;	
-	*/}
+		case 'Septiembre':
+		case 'Octubre':
+		case 'Noviembre':
+		case 'Diciembre':
+			alert("Ya pasamos el frio, ahora calor!!!");
+			break;												
 
+//switch if
+
+
+
+
+	}
 
 
 
