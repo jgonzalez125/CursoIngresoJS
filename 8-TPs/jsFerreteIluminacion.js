@@ -77,3 +77,4 @@ function CalcularPrecio ()
 		document.getElementById('precioDescuento').value= 'Usted pagó '+porcentajeAumento+' de IIBB';
 	}
 }
+

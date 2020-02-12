@@ -1,6 +1,6 @@
 function mostrar()
 {
-//tomo la edad  
+//tomo el mes del año
 var mesDelAño = document.getElementById('mes').value;
 
 switch(mesDelAño)
@@ -17,12 +17,12 @@ switch(mesDelAño)
 	case 'Diciembre':
 		alert('Felices fiesta!!!.');
 		break;
-/*			default: 
+		default: 
 			console.log('nada');
 			break;	
-*/}
+}
 
-
+	alert('Mes del año');
 
 
 }//FIN DE LA FUNCIÓN
