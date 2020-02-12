@@ -17,10 +17,10 @@ switch(mesDelAño)
 	case 'Diciembre':
 		alert('Felices fiesta!!!.');
 		break;
-			default: 
+/*			default: 
 			console.log('nada');
 			break;	
-}
+*/}
 
 
 

@@ -9,15 +9,16 @@ function mostrar()
 	if(num > 8)
 	{
 		alert(num +" EXCELENTE");
-	} else 
+	}else 
 	{
 		if(num < 4)
 		{
 			alert(num +" Vamos, la proxima se puede");
-		}
-		 	else{
+		}else
+		{
 				alert( num +" APROBÓ");
 		}
+		 	
 	}
 
 /*	if(num < 8 && num > 3)
