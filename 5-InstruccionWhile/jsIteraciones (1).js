@@ -5,7 +5,6 @@ function mostrar()
 	num = 0;
 
 	while(num < 10) {
-		
 		num++;
 		alert(num);
 	}
