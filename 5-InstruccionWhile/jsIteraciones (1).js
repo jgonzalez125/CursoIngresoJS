@@ -2,11 +2,11 @@ function mostrar()
 {
 	var num;
 
-	num = 1;
+	num = 0;
 
-	while(num < 11) {
-		alert(num);
+	while(num < 10) {
 		num++;
+		alert(num);
 	}
-
+	
 }//FIN DE LA FUNCIÓN

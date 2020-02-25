@@ -21,6 +21,7 @@ function mostrar()
 			negativo=negativo*numeroIngresado;
 		}
 
+
 		respuesta = prompt('Ingrese "si" para continuar ingresando numeros');
 	}
 	document.getElementById('suma').value=positivo;

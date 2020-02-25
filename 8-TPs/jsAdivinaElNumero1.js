@@ -19,35 +19,37 @@ de no ser igual se debe informar si “falta…”  para llegar al número secre
 		//Genero el número RANDOM entre 1 y 100
 		numeroSecreto= Math.floor(Math.random()*100 +1);
 			//alert(numeroSecreto );
-			alert(numeroSecreto);
-
-		if(comenzar)
-		{
-			contadorIntentos=0;
-		}	
+			console.log(numeroSecreto);
+			alert('Comenzamos!');
 	}
 
 	function verificar()
 	{
-		if(numeroIngresado==numeroSecreto)
+		while(numeroIngresado!=numeroSecreto)
 		{
-			alert('Usted es un ganador!!! y en solo '+contadorIntentos+' intentos');
-		} else
-		{
-
-			if(numeroIngresado > numeroSecreto)
-			{
-				contadorIntentos++;
-				alert('Usted se pasó '+(numeroIngresado-numeroSecreto)+' del numero secreto')
-			} else
-			{
-				contadorIntentos++;
-				alert('A usted le faltan '+(numeroSecreto-numeroIngresado)+' para llegar al numero secreto');
-			}
-		}	
-			document.getElementById('intentos').value=contadorIntentos;
 			numeroIngresado=document.getElementById('numero').value;
 			numeroIngresado=parseInt(numeroIngresado);
+			contadorIntentos++;
+			break;
+		}
+		/*numeroIngresado=document.getElementById('numero').value;
+		numeroIngresado=parseInt(numeroIngresado);*/
+
+		if(numeroIngresado==numeroSecreto)
+			{
+				alert('Usted es un ganador!!! y en solo '+contadorIntentos+' intentos');
+			} else
+			{
+
+				if(numeroIngresado > numeroSecreto)
+				{
+					alert('Usted se pasó del numero secreto');
+				} else
+				{
+					alert('A usted le faltan para llegar al numero secreto');
+				}
+			}	
+			document.getElementById('intentos').value=contadorIntentos;
+			
 	}
-		
 	
