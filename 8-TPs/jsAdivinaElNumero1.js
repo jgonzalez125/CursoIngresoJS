@@ -10,17 +10,20 @@ de no ser igual se debe informar si “falta…”  para llegar al número secre
 	var numeroSecreto; 
 	var contadorIntentos=0;
 	var numeroIngresado;
-
-
-
+	var pasado;
+	var falta;
 
 	function comenzar()
 	{
 		//Genero el número RANDOM entre 1 y 100
 		numeroSecreto= Math.floor(Math.random()*100 +1);
 			//alert(numeroSecreto );
+<<<<<<< HEAD
 			console.log(numeroSecreto);
 			alert('Comenzamos!');
+=======
+			alert(numeroSecreto);
+>>>>>>> 162b6e3d3e8f44c91d6d2126304eedadc936da61
 	}
 
 	function verificar()
