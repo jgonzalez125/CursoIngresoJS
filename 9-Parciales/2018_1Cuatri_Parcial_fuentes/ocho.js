@@ -13,6 +13,8 @@ function mostrar()
 	var minimo;
 	var acumuladorNegativos;
 	var ceros;
+	var letraMaximo;
+	var letraMinimo;
 
 	contador=0;
 	respuesta='si';
@@ -24,51 +26,61 @@ function mostrar()
 	acumuladorPositivos=0;
 	contadorPositivos=0;
 
-	while(respuesta=='si')
-	{
+	while(respuesta=='si') {
+		
 		contador=contador+1;//#3 cambio la variable de la logica
 		
 		numero=prompt("ingrese el "+contador+"º numero :");
 		numero=parseInt(numero)
 
-		while(numero<-100 || numero>100)//bien
-		{
+		while(numero<-100 || numero>100) {
 			numero=prompt("error,reingrese el "+contador+"º numero :");
 			numero=parseInt(numero);
 		}
+		
 		letra=prompt('Ingrese la '+contador+'° letra:');
 		
-		if(numero%2==0)//numeros pares
-		{
+		if(numero%2==0) {
 			pares++;
-		}else//numeros impares
-		{
+		} else {
 			impares++;
 		}
 
-		if(numero>0)//contador de positivos
-		{
-			positivos=numero;
-			acumuladorPositivos=acumuladorPositivos+positivos;
+		if(numero>0) { //promedio positivos
+			positivos= numero;
+			acumuladorPositivos= acumuladorPositivos+positivos;
 			contadorPositivos++;
-		}else//contador de negativos
-		{
-			negativos=numero;
+		} else {
+			negativos= numero;
 			acumuladorNegativos=acumuladorNegativos+negativos;
 		}
 
-		if(numero== 100 || numero== -100)//cantidad de ceros
-		{
+		if(numero == 100 || numero == -100) { //cantidad de 0
 			ceros= ceros+2;
-		}else
-		{
-			if(numero%10==0)
-			{
+		} else {
+			if(numero%10 == 0) {
 				ceros++;
 			}
 		}
 
-	/* Otra forma de realizar la cantidad de ceros mediante switch:
+		if(contador==1) { //tomo maximos y minimos
+			maximo=numero;
+			minimo=numero;
+			letraMaximo=letra;
+			letraMinimo=letra;
+		} else {
+			if(numero>maximo) {
+				maximo=numero;
+				letraMaximo=letra;
+			}
+			
+			if(numero<minimo) { 
+				minimo=numero;
+				letraMinimo=letra;
+			}
+		}
+
+		/* Otra forma de realizar la cantidad de ceros mediante switch:
 		switch(numero)
 		{
 			case 0:
@@ -97,28 +109,6 @@ function mostrar()
 				ceros= ceros+2;
 				break;
 		}*/
-
-		if(contador==1)//maximo y minimo del numero
-		{
-			maximo=numero;
-			minimo=numero;
-			letraMaximo=letra;
-			letraMinimo=letra;
-		}else
-		{
-			if(numero>maximo)
-			{
-				maximo=numero;
-				letraMaximo=letra;
-			}
-			if(numero<minimo)
-			{
-				minimo=numero;
-				letraMinimo=letra;
-			}
-		}
-
-		acumulador=acumulador+positivos;
 		respuesta=prompt('si para seguir');
 	}
 	promedio=acumuladorPositivos/contadorPositivos;//promedio de positivos
