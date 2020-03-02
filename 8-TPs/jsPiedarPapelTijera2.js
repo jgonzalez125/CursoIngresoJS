@@ -10,6 +10,9 @@
 	var piedra1;
 	var papel1;
 	var tijera1;
+	var ganaste;
+	var perdio;
+	var empate;
 	
 	function comenzar()
 	{
@@ -31,6 +34,9 @@
 				eleccionMaquina=tijera;
 			}
 		} 	
+
+
+		
 	}//FIN DE LA FUNCIÓN
 	function piedra()
 	{
@@ -38,22 +44,20 @@
 		if(eleccionUsuario==piedra1 && eleccionMaquina==piedra)
 		{
 			alert('es un empate');
-			ContadorDeEmpates++;
+			empate;
 		}else
 		{
 			if(eleccionUsuario==piedra1 && eleccionMaquina==papel)
 			{
 				alert('perdiste');
-				ContadorDePerdidas++;
+				perdio;
 			}else
 			{
 				alert('GANASTE!');
-				ContadorDeGanadas++;
+				ganaste;
 			}
 		}
-		document.getElementById('ganadas').value=ContadorDeGanadas;
-		document.getElementById('perdidas').value=ContadorDePerdidas;
-		document.getElementById('empatadas').value=ContadorDeEmpates;
+		
 	}//FIN DE LA FUNCIÓN
 	function papel()
 	{
@@ -62,22 +66,20 @@
 		if(eleccionUsuario==papel1 && eleccionMaquina==papel)
 		{
 			alert('es un empate');
-			ContadorDeEmpates++;
+			empate;
 		}else
 		{
 			if(eleccionUsuario==papel1 && eleccionMaquina==tijera)
 			{
 				alert('perdiste');
-				ContadorDePerdidas++;
+				perdio;
 			}else
 			{
 				alert('GANASTE!');
-				ContadorDeGanadas++;
+				ganaste;
 			}
 		}
-		document.getElementById('ganadas').value=ContadorDeGanadas;
-		document.getElementById('perdidas').value=ContadorDePerdidas;
-		document.getElementById('empatadas').value=ContadorDeEmpates;
+		
 	}//FIN DE LA FUNCIÓN
 	function tijera()
 	{
@@ -85,25 +87,35 @@
 		if(eleccionUsuario==tijera1 && eleccionMaquina==papel)
 		{
 			alert('GANASTE!');
-			ContadorDeGanadas++;
+			ganaste;
 		}else
 		{
 			if(eleccionUsuario==tijera1 && eleccionMaquina==piedra)
 			{
 				alert('perdiste');
-				ContadorDePerdidas++;
+				perdio;
 			}else
 			{
 				alert('es un empate');
-				ContadorDeEmpates++;
 			}
 		}	
-		document.getElementById('ganadas').value=ContadorDeGanadas;
-		document.getElementById('perdidas').value=ContadorDePerdidas;
-		document.getElementById('empatadas').value=ContadorDeEmpates;
+		
 	}//FIN DE LA FUNCIÓN
 
 	function mostrarResultado()
 	{
-		
+		while(empate){
+			ContadorDeEmpates++;
+			document.getElementById("Juegos perdidos").value=ContadorDeEmpates;		
+		}
+		while(ganaste){
+			document.getElementById("Juegos perdidos").value=ContadorDeGanadas;
+			ContadorDeGanadas++;
+		}
+		while(perdio)
+		{
+			document.getElementById("Juegos perdidos").value=ContadorDePerdidas;
+			ContadorDePerdidas++;
+		}
+
 	}
