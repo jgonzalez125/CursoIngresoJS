@@ -20,8 +20,6 @@ function mostrar()
 	respuesta= 'si';
 
 	do{
-		contador++;
-
 		marcaProducto= prompt('Ingrese '+contador+'º marca de su producto:');
 
 		do{
@@ -52,6 +50,7 @@ function mostrar()
 			}
 
 		respuesta=prompt('ingrese si para seguir ingresando');			
+		contador++;
 		acumulador=acumulador+pesoProducto;
 	}while(respuesta=='si');
 
@@ -59,7 +58,7 @@ function mostrar()
 
 	document.write('<br>Cantidad de temperaturas pares: '+pares);
 	document.write('<br>Marca producto mas pesado: '+pesoProductoMaximoMarca);
-	document.write('<br>Cantidad de productos que se conservan a menos de 0 grados: '+temperaturaProductoBajoCero)
+	document.write('<br>Cantidad de productos que se conservan a menos de 0 grados: '+temperaturaProductoBajoCero);
 	document.write('<br>Promedio de peso de todos los productos: '+promedio);
 	document.write('<br>El peso máximo: '+pesoProductoMaximo+' '+'El peso minimo: '+pesoProductoMinimo);
 
